@@ -1,7 +1,7 @@
 interface ResData {
     [PropsType: string]: any
     userid: number
-    id: number
+    id: number //  Первый вопрос (тип данных)
     title: string
     body: string
 }
@@ -14,7 +14,7 @@ class FifteenthTitle {
         fetch(FifteenthTitle.#URL)
         .then(res => {
             if (res.ok) {
-            return res.json() // Вопрос по заданию
+            return res.json() //Второй вопрос (оператор)
             }
         })
         .then(resData => FifteenthTitle.#getTitleFromJson(resData))
@@ -23,9 +23,9 @@ class FifteenthTitle {
     }
     
     static #getTitleFromJson(resData: ResData) {
-    const itemWithTitle = resData.find(item => item.id === FifteenthTitle.#ID)
+    const itemWithTitle = resData.find(item => item.id === FifteenthTitle.#ID) // Третий вопрос (метод перебора массива с объектами для поиска необходимого элемента с необходимым id)
     const title = itemWithTitle.title
-    return title
+    return title //Четвертый вопрос (оператор) 
     }
 
     run() {
