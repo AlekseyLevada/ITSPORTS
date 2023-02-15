@@ -33,6 +33,6 @@ class FifteenthTitle {
     }
 }
 
-const newfifteenthTitle = new FifteenthTitle()
+const fifteenthTitle = new FifteenthTitle()
 
-newfifteenthTitle.run()
+fifteenthTitle.run()

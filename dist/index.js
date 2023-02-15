@@ -14,7 +14,7 @@ var FifteenthTitle = /** @class */ (function () {
         fetch(__classPrivateFieldGet(FifteenthTitle, _a, "f", _FifteenthTitle_URL))
             .then(function (res) {
             if (res.ok) {
-                return res.json(); // Вопрос по заданию
+                return res.json(); //Второй вопрос (оператор)
             }
         })
             .then(function (resData) { return __classPrivateFieldGet(FifteenthTitle, _a, "m", _FifteenthTitle_getTitleFromJson).call(FifteenthTitle, resData); })
@@ -23,13 +23,13 @@ var FifteenthTitle = /** @class */ (function () {
             return console.error(message);
         });
     }, _FifteenthTitle_getTitleFromJson = function _FifteenthTitle_getTitleFromJson(resData) {
-        var itemWithTitle = resData.find(function (item) { return item.id === __classPrivateFieldGet(FifteenthTitle, _a, "f", _FifteenthTitle_ID); });
+        var itemWithTitle = resData.find(function (item) { return item.id === __classPrivateFieldGet(FifteenthTitle, _a, "f", _FifteenthTitle_ID); }); // Третий вопрос (метод перебора массива с объектами для поиска необходимого элемента с необходимым id)
         var title = itemWithTitle.title;
-        return title;
+        return title; //Четвертый вопрос (оператор) 
     };
     _FifteenthTitle_URL = { value: 'https://jsonplaceholder.typicode.com/posts' };
     _FifteenthTitle_ID = { value: 15 };
     return FifteenthTitle;
 }());
-var newfifteenthTitle = new FifteenthTitle();
-newfifteenthTitle.run();
+var fifteenthTitle = new FifteenthTitle();
+fifteenthTitle.run();
