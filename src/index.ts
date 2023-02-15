@@ -23,7 +23,7 @@ class FifteenthTitle {
     }
     
     static #getTitleFromJson(resData: ResData) {
-    const itemWithTitle = resData.find(item => item.id === FifteenthTitle.#ID) // Третий вопрос (метод перебора массива с объектами для поиска необходимого элемента с необходимым id)
+    const itemWithTitle = resData.find((item: { id: number }) => item.id === FifteenthTitle.#ID) // Третий вопрос (метод перебора массива с объектами для поиска необходимого элемента с необходимым id)
     const title = itemWithTitle.title
     return title //Четвертый вопрос (оператор) 
     }
